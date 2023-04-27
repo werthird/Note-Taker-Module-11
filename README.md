@@ -43,7 +43,7 @@ Here is a very handy note taking web app. If you want to keep track of anything 
 ## [Project Status](#project-status)
     MVP - Minimal Viable Product
 
-Follow this link to our [webpage](https://werthird.github.io/SVG-Logo-Maker-Module-10/) to try the **Note Taker** web app out for yourself!
+Follow this link to our [webpage](https://note-taker-devin-reilly.herokuapp.com/) to try the **Note Taker** web app out for yourself!
 
 <br />
 
@@ -53,28 +53,24 @@ To get a look at the code used for this application, checkout our my <a href="ht
 <br />
 
 ## [Installation](#installation)
-If you are wanting to use this application on your own system, you will need to know a few things:
-
-1.  This is a command-line application. It uses the NPM Module [**Inquirer.js**](https://www.npmjs.com/package/inquirer?activeTab=readme). Please follow this link to read about it. 
-
-2. Clone down this repo onto your local system.
-
-3. After doing so, open a terminal in the SVG-Logo-Maker-Module-10 file, and enter the following code to download inquirer:
-	```
-	npm i
-	```
+No need for installation. Please click here to see our deployed webpage: **[Note Taker App!](https://note-taker-devin-reilly.herokuapp.com/)**
 
 <br />
 
 ## [Useage](#useage)
-This is a command-line application that will take you through a series of prompt to build the README.
+Follow these steps for a full walk through of our web app:
 
-1. After the module is installed on your local system, you are ready to use this app. Enter this code into your terminal:
-	```
-	node index.js
-	```
+1. When you click first enter on the webpage, you will see our landing page. Click on the "Get Started" button.
 
-2. Follow the prompts in the command-line. They will ask for text, text-color, shape and shape-color
+2. On the right of the webpage will be a text field for you to enter the title and text of the note you want to save.
+
+3. After you have entered it, a save button will appear in the top right of the page that will save your note to our database.
+
+4. If you want to view a saved note, click on it in the left panel, and it will show it on the right.
+
+5. To add a new note after viewing a previous one, just click on the "plus" symbol in the top right of the page.
+
+6. Finally, if you want to delete a note, just click on the delete icon next to the note.
    
 
 <br />
@@ -93,21 +89,7 @@ No contributing guidelines. For any suggestions or comments, please see [Questio
 <br />
 
 ## [Test Instructions](#test)
-To test this application, we have provided a few tests for the shapes that can be generated. 
-
-1. First, you will need to download Jest, a test framework. Please enter into the command line:
-
-	```
-	npm i
-	```
-2. Now you will be able to run the test. Enter the following code in the teminal:
-
-	```
-	npm run test
-	```
-3. There are three test. Each should pass and the resulting screen should look like this:
-
-<img style="text-align: center; border: solid 2px white; width:50%;height:100%" src="./Assets/Images/svg-logo-generator-test-screenshot.jpg" alt="SVG Logo Maker Screenshot showing command-line passed tests"/>
+No specific testing instructions.
 
 <br />
 
@@ -124,7 +106,7 @@ Distributed under the MIT License. See LICENSE.txt for more information.
 <br />
 
 ## [Contributors](#contributors)
-This is a UCF Coding bootcamp homework assignment. There was some pre-written code that had to be finished and formulated to meet the assignments requirements.
+This is built as a UCF Coding bootcamp homework assignment. There was some pre-written code that had to be finished and formulated to meet the assignments requirements.
 
 Finished by Devin Reilly
 
