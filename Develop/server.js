@@ -2,20 +2,25 @@
 const express = require('express');
 const path = require('path');
 const api = require('./routes/index.js');
+const { clog } = require('./middleware/clog');
+
+// Define Port
+const PORT = 3001;
 
 // Start Express
 const app = express();
 
-// Define Port
-const PORT = 3001;
+// Import custom middleware, "cLog"
+app.use(clog);
 
 // Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api', api);
 
-//Make sure to start from publics folder
+//Start from publics folder
 app.use(express.static('public'));
+
 
 //============ HTML ROUTES =================
 // GET Route - Homepage
@@ -31,7 +36,7 @@ app.get('/notes', (req, res) =>
 
 //============ 404 ROUTES =================
 // GET Catch-all Route - 404 Page
-app.get('/*', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/404.html'))
 });
 
