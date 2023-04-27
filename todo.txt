@@ -1,5 +1,8 @@
 ToDo
 - Deploy on Heroku
+- Build readme
+- Styleize 404 page
+- build tests for page
 
 
 

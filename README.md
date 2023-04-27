@@ -1,140 +1,149 @@
-# 11 Express.js: Note Taker
+<header style="height: 100px; background: linear-gradient(to right, #000046, #1CB5E0);"><h1 style="font-size: 65px; text-align: center"><strong>Note Taker</strong></h1></header>
 
-## Your Task
+<br />
 
-Your assignment is to modify starter code to create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
-
-The application’s front end has already been created. It's your job to build the back end, connect the two, and then deploy the entire application to Heroku.
+[![${license}](https://img.shields.io/badge/license-mit-blue)](#license)
 
 
-## User Story
+<br />
 
-```
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
-```
+> # [Description](#description)
+Here is a very handy note taking web app. If you want to keep track of anything you need to be doing, from grocery lists, to errands to run, this will display each item in an organized and easy to use way. Just enter your note into the app, click save, and it will dispaly for as long as you need it. We also added in a real handy feature to delete the note when you no longer need it.
 
+<br />
+<br />
 
-## Acceptance Criteria
+---
+<details>
+<summary style="font-size: 25px">Table of Contents</summary> 
 
-```
-GIVEN a note-taking application
-WHEN I open the Note Taker
-THEN I am presented with a landing page with a link to a notes page
-WHEN I click on the link to the notes page
-THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
-WHEN I enter a new note title and the note’s text
-THEN a Save icon appears in the navigation at the top of the page
-WHEN I click on the Save icon
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WHEN I click on the Write icon in the navigation at the top of the page
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
-```
+- [Description](#description)
+- [Getting Started](#getting-started)
+  - [Project Status](#project-status)
+  - [Installation](#installation)
+  - [Useage](#useage)
+  - [Contributing Guidelines](#contributing)
+  - [Test Instructions](#test) 
+  - [License](#license)
+- [Credits](#credits)
+  - [Contributors](#contributors)
+  - [Acknowledgements](#acknowledgements)
+- [Questions](#questions)
+</details>
 
+<br />
+<br />
 
-## Mock-Up
+---
 
-The following images show the web application's appearance and functionality:
+> # [Getting Started](#getting-started)
 
-![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.](./Assets/11-express-homework-demo-01.png)
+<br />
 
-![Note titled “Balance accounts” reads, “Balance account books by end of day Monday,” with other notes listed on the left.](./Assets/11-express-homework-demo-02.png)
+## [Project Status](#project-status)
+    MVP - Minimal Viable Product
 
+Follow this link to our [webpage](https://werthird.github.io/SVG-Logo-Maker-Module-10/) to try the **Note Taker** web app out for yourself!
 
-## Getting Started
+<br />
 
-On the back end, the application should include a `db.json` file that will be used to store and retrieve notes using the `fs` module.
-
-The following HTML routes should be created:
-
-* `GET /notes` should return the `notes.html` file.
-
-* `GET *` should return the `index.html` file.
-
-The following API routes should be created:
-
-* `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
-
-* `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
+To get a look at the code used for this application, checkout our my <a href="https://github.com/werthird/Note-Taker-Module-11">GitHub Repo!</a> 
 
 
-## Bonus
+<br />
 
-You haven’t learned how to handle DELETE requests, but this application offers that functionality on the front end. As a bonus, try to add the DELETE route to the application using the following guideline:
+## [Installation](#installation)
+If you are wanting to use this application on your own system, you will need to know a few things:
 
-* `DELETE /api/notes/:id` should receive a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+1.  This is a command-line application. It uses the NPM Module [**Inquirer.js**](https://www.npmjs.com/package/inquirer?activeTab=readme). Please follow this link to read about it. 
 
+2. Clone down this repo onto your local system.
 
-## Grading Requirements
+3. After doing so, open a terminal in the SVG-Logo-Maker-Module-10 file, and enter the following code to download inquirer:
+	```
+	npm i
+	```
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+<br />
 
-This Challenge is graded based on the following criteria: 
+## [Useage](#useage)
+This is a command-line application that will take you through a series of prompt to build the README.
 
+1. After the module is installed on your local system, you are ready to use this app. Enter this code into your terminal:
+	```
+	node index.js
+	```
 
-### Technical Acceptance Criteria: 40%
+2. Follow the prompts in the command-line. They will ask for text, text-color, shape and shape-color
+   
 
-* Satisfies all of the preceding acceptance criteria plus the following:
+<br />
+<h2>Note Taker's Landing Page</h2>
+<img style="text-align: center; border: solid 2px white; width:100%;height:100%" src="Assets/note-taker-landing-page-screenshot.jpg" alt="Note taker web app landing page"/>
 
-  * Application front end must connect to an Express.js back end.
+<br />
+<h2>Note Taker Note's Page</h2>
+<img style="text-align: center; border: solid 2px white; width:100%;height:100%" src="Assets/note-taker-notes-page-screenshot.jpg" alt="Note taker web app displaying notes page with previous notes"/>
 
-  * Application back end must store notes that have a unique id in a JSON file.
+<br />
 
-  * Application must be deployed to Heroku.
+## [Contributing Guidelines](#contributing)
+No contributing guidelines. For any suggestions or comments, please see [Questions](#questions) section below.
 
+<br />
 
-### Deployment: 36%
+## [Test Instructions](#test)
+To test this application, we have provided a few tests for the shapes that can be generated. 
 
-* Application deployed at live URL.
+1. First, you will need to download Jest, a test framework. Please enter into the command line:
 
-* Application loads with no errors.
+	```
+	npm i
+	```
+2. Now you will be able to run the test. Enter the following code in the teminal:
 
-* Application GitHub URL submitted.
+	```
+	npm run test
+	```
+3. There are three test. Each should pass and the resulting screen should look like this:
 
-* GitHub repository contains application code.
+<img style="text-align: center; border: solid 2px white; width:50%;height:100%" src="./Assets/Images/svg-logo-generator-test-screenshot.jpg" alt="SVG Logo Maker Screenshot showing command-line passed tests"/>
 
+<br />
 
-### Application Quality: 11%
+## [License](#license)
+Distributed under the MIT License. See LICENSE.txt for more information.
 
-* Application console is free of errors.
+<br />
+<br />
 
+---
 
-### Repository Quality: 13%
+> # [Credits](#credits)
 
-* Repository has a unique name.
+<br />
 
-* Repository follows best practices for file structure and naming conventions.
+## [Contributors](#contributors)
+This is a UCF Coding bootcamp homework assignment. There was some pre-written code that had to be finished and formulated to meet the assignments requirements.
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+Finished by Devin Reilly
 
-* Repository contains multiple descriptive commit messages.
+<br />
 
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+## [Acknowledgements](#acknowledgements)
+- UCF GitLab starter code
+- [The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide) - README Template 
+- UCF Instructor **John Dinsmore**, and TA's, **Kristofer Marshall** and **Rider Cogswell**
+- Students of UCF Coding Boot Camp, in class, on Slack and on Discord
+- Research articles from Google Search, ChatGPT, MDN Docs, W3Schools
 
+<br />
+<br />
 
-### Bonus: +10 Points
+---
 
-* Application allows users to delete notes.
+> # [Questions](#questions)
 
+Here is a link to our <a href="https://github.com/werthird">GitHub profile page!</a>
 
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+Or send us an <a href="mailto: werthird@aol.com?subject=Note Taker Feedback">Email!</a>
